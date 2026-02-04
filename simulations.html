@@ -101,6 +101,39 @@
             letter-spacing: 1px;
         }
 
+        .description {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border-left: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .description p {
+            color: #b8b8b8;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .analogy-label {
+            display: inline-block;
+            color: #00d9ff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .analogy-text {
+            color: #e4e4e4 !important;
+            font-style: italic;
+        }
+
         @media (max-width: 768px) {
             .page-title {
                 font-size: 1.8rem;
@@ -113,6 +146,10 @@
 
             .video-card h2 {
                 font-size: 1.1rem;
+            }
+
+            .description {
+                padding: 15px;
             }
         }
     </style>
@@ -130,6 +167,11 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
+            <div class="description">
+                <p>Directional transmission models disease spread that follows preferential pathways, where infection can only propagate in specific directions (left and down in this case).</p>
+                <span class="analogy-label">Real-world analogy</span>
+                <p class="analogy-text">Prevailing human movement patterns such as daily commuting flows or one-directional pedestrian traffic.</p>
+            </div>
         </div>
 
         <div class="video-card">
@@ -140,6 +182,11 @@
                     <source src="sirs_variant_b_directed_echo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+            <div class="description">
+                <p>Anisotropic interactions introduce direction-dependent transmission weights, where infection spreads more readily along certain axes than others.</p>
+                <span class="analogy-label">Real-world analogy</span>
+                <p class="analogy-text">Transport corridors, major roads, or wind-driven airborne transmission favoring specific directions.</p>
             </div>
         </div>
 
@@ -152,6 +199,11 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
+            <div class="description">
+                <p>Spatial heterogeneity introduces location-dependent model parameters, where transmission rates, recovery rates, or susceptibility vary across the grid.</p>
+                <span class="analogy-label">Real-world analogy</span>
+                <p class="analogy-text">Urban–rural differences in population density, social activity, or contact rates.</p>
+            </div>
         </div>
 
         <div class="video-card">
@@ -163,6 +215,11 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
+            <div class="description">
+                <p>Non-isotropic neighborhoods define asymmetric connectivity patterns where each cell interacts with a non-uniform subset of its neighbors.</p>
+                <span class="analogy-label">Real-world analogy</span>
+                <p class="analogy-text">Limited social contacts due to household structure, workplace clustering, or partial lockdown measures.</p>
+            </div>
         </div>
 
         <div class="video-card">
@@ -173,6 +230,11 @@
                     <source src="sirs_variant_5_obstacles_echo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+            <div class="description">
+                <p>Obstacles and walls introduce impassable cells that block disease transmission, creating isolated regions and altering spread patterns.</p>
+                <span class="analogy-label">Real-world analogy</span>
+                <p class="analogy-text">Physical barriers such as buildings, quarantine zones, restricted areas, or geographical features.</p>
             </div>
         </div>
     </div>
