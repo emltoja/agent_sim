@@ -1,5 +1,180 @@
-<video controls autoplay loop muted width = "100%">
-    <source src="sirs_variant_1_rectangle_echo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-<p>Simulation on grid with different height and width</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRS Model Variants</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e4e4e4;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 50px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .page-title span {
+            background: linear-gradient(90deg, #00d9ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #fff;
+            padding-left: 15px;
+            border-left: 4px solid #00d9ff;
+        }
+
+        .video-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .video-card:nth-child(odd) h2 {
+            border-left-color: #00d9ff;
+        }
+
+        .video-card:nth-child(even) h2 {
+            border-left-color: #00ff88;
+        }
+
+        /* Variant number badges */
+        .variant-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d9ff, #00ff88);
+            color: #1a1a2e;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .video-card {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+
+            .video-card h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title"><span>SIRS on the Grid</span> Model Variants</h1>
+
+        <div class="video-card">
+            <span class="variant-badge">Variant 1</span>
+            <h2>Grid with Directed Connections (Left & Down)</h2>
+            <div class="video-wrapper">
+                <video controls autoplay loop muted playsinline>
+                    <source src="sirs_variant_a_directed_echo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <span class="variant-badge">Variant 2</span>
+            <h2>Grid with Anisotropy — Different Weights for Directions</h2>
+            <div class="video-wrapper">
+                <video controls autoplay loop muted playsinline>
+                    <source src="sirs_variant_b_directed_echo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <span class="variant-badge">Variant 3</span>
+            <h2>Grid with Heterogeneous Parameters in Space</h2>
+            <div class="video-wrapper">
+                <video controls autoplay loop muted playsinline>
+                    <source src="sirs_variant_2_maps_echo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <span class="variant-badge">Variant 4</span>
+            <h2>Grid with Non-Isotropic Neighborhood Conditions</h2>
+            <div class="video-wrapper">
+                <video controls autoplay loop muted playsinline>
+                    <source src="sirs_variant_3_asymmetric_echo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <span class="variant-badge">Variant 5</span>
+            <h2>Grid with Obstacles</h2>
+            <div class="video-wrapper">
+                <video controls autoplay loop muted playsinline>
+                    <source src="sirs_variant_5_obstacles_echo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
